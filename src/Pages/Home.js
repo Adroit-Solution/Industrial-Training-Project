@@ -2,13 +2,16 @@ import { Component } from "react";
 import Title from "../components/Title";
 
 class Home extends Component {
-  state = {};
+  state = {
+    title: "Title",
+    description: "Nothing just using a State with Prop",
+  };
   render() {
     return (
-      <>
-        <h2>Hi from Home Page</h2>
-        <Title title="HomeTitle"></Title>
-      </>
+      <Title
+        title={this.state.title}
+        description={this.state.description}
+      ></Title>
     );
   }
 }

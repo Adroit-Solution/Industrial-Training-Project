@@ -1,10 +1,11 @@
 import React from "react";
 
 function Title(props) {
+  const { title, description } = props;
   return (
     <>
-      <h1>Same Value = This is Title Page</h1>
-      <h1>Prop Value = Title of Page : {props.title}</h1>
+      <h3>Title of Page : {title}</h3>
+      <p>{description}</p>
     </>
   );
 }
