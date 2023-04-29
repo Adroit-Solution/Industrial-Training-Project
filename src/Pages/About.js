@@ -1,9 +1,9 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Title from "../components/Title";
 
-class Home extends Component {
+export default class About extends Component {
   state = {
-    title: "Home Page",
+    title: "About Us Page",
     description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi
     natus sapiente iusto nobis fuga repudiandae dolorem dolorum. Rem in
     sint culpa nihil natus dicta dolorem soluta, doloribus, quia rerum
@@ -22,13 +22,8 @@ class Home extends Component {
   render() {
     return (
       <>
-        <Title
-          title={this.state.title}
-          description={this.state.description}
-        ></Title>
+        <Title title={this.state.title} description={this.state.description} />
       </>
     );
   }
 }
-
-export default Home;

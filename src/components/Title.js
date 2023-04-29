@@ -5,6 +5,7 @@ function Title(props) {
   return (
     <>
       <h3>Title of Page : {title}</h3>
+      <br />
       <p>{description}</p>
     </>
   );
