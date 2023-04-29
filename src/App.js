@@ -6,6 +6,7 @@ import Counter from "./Pages/Counter";
 import { useState } from "react";
 import About from "./Pages/About";
 import List from "./Pages/List";
+import Login from "./components/Login";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <List />
+      <Login />
     </div>
   );
 
