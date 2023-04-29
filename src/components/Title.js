@@ -1,13 +1,15 @@
 import React from "react";
+import style from "../components/title.module.css";
 
 function Title(props) {
-  const { description } = props;
+  const { title, description } = props;
   return (
     <>
-      <h3>Title : {description.title}</h3>
-      <h3>description : {description.description}</h3>
-      <h3>id : {description.id}</h3>
-      <br />
+      <div className={style.card}>
+        <h3 className={style.title}>Title : {title}</h3>
+        <h3>description : {description}</h3>
+        <br />
+      </div>
     </>
   );
 }

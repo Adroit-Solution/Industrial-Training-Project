@@ -10,7 +10,9 @@ class List extends Component {
       { title: "Fourth", description: "This is Fourth", id: 4 },
     ];
 
-    const show = arr.map((obj) => <Title key={obj.id} description={obj} />);
+    const show = arr.map((obj) => (
+      <Title key={obj.title} title={obj.title} description={obj.description} />
+    ));
     return <div>{show}</div>;
   }
 }

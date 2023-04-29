@@ -1,0 +1,15 @@
+.title{
+font-size: 20px;
+}
+
+.card{
+    border: 5px solid black;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.description{
+font-size: 10px;
+}
