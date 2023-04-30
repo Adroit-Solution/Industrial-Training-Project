@@ -7,6 +7,7 @@ import { useState } from "react";
 import About from "./Pages/About";
 import List from "./Pages/List";
 import Login from "./components/Login";
+import FocusInput from "./Pages/FocusInput";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Login />
+      <FocusInput />
     </div>
   );
 
