@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import Title from "../components/Title";
 
-class List extends Component {
+class List extends PureComponent {
   render() {
     const arr = [
       { title: "First", description: "This is First", id: 1 },
