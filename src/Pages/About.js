@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, PureComponent } from "react";
 import Title from "../components/Title";
 
-export default class About extends Component {
+export default class About extends PureComponent {
   state = {
     title: "About Us Page",
     description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi

@@ -1,7 +1,7 @@
-import { Component } from "react";
+import { Component, PureComponent } from "react";
 import Title from "../components/Title";
 
-class Home extends Component {
+class Home extends PureComponent {
   state = {
     title: "Home Page",
     description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi
