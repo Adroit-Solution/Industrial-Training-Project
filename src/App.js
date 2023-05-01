@@ -9,6 +9,7 @@ import List from "./Pages/List";
 import Login from "./components/Login";
 import FocusInput from "./Pages/FocusInput";
 import RenderPropsComponent from "./Pages/RenderPropsComponent";
+import Users from "./Pages/Users";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -23,12 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <Home />
-      <RenderPropsComponent
-        render={() => {
-          return <h3> I am coming from render props </h3>;
-        }}
-      />
+      <Users />
     </div>
   );
 
