@@ -1,7 +1,23 @@
 import { Component, PureComponent } from "react";
 import Title from "../components/Title";
+import hOC from "./HOC";
+import UserList from "./UserList";
 
 class Home extends PureComponent {
+  UsersData = [
+    {
+      id: 1,
+      name: "Krunal",
+    },
+    {
+      id: 2,
+      name: "Ankit",
+    },
+    {
+      id: 3,
+      name: "Rushabh",
+    },
+  ];
   state = {
     title: "Home Page",
     description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi modi
@@ -19,13 +35,17 @@ class Home extends PureComponent {
     quod hic minima facilis consequatur fugit praesentium magni ipsam
     ullam recusandae cupiditate?`,
   };
+
+  Users = hOC(UserList, this.UsersData);
+
   render() {
     return (
       <>
-        <Title
+        {/* <Title
           title={this.state.title}
           description={this.state.description}
-        ></Title>
+        ></Title> */}
+        <this.Users />
       </>
     );
   }
