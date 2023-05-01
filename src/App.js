@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import FocusInput from "./Pages/FocusInput";
 import RenderPropsComponent from "./Pages/RenderPropsComponent";
 import Users from "./Pages/Users";
+import Post from "./Pages/Post";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Users />
+      <Post />
     </div>
   );
 
