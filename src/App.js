@@ -12,6 +12,7 @@ import Users from "./Pages/Users";
 import Post from "./Pages/Post";
 import CounterHook from "./Pages/CounterHook";
 import LoginForm from "./components/loginForm";
+import PostDetail from "./components/PostDetail";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -26,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <Users />
+      <PostDetail />
     </div>
   );
 
