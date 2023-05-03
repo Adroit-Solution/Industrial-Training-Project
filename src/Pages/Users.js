@@ -10,7 +10,7 @@ function Users() {
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
         console.log(response.data);
-        this.setState({ users: response.data });
+        setUsers(response.data);
         console.log(this.state.users);
       })
       .catch((error) => {
