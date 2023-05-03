@@ -1,9 +1,11 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import UserDetail from "./UserDetail";
 
-export class Users extends Component {
-  componentDidMount() {
+function Users() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => {
@@ -14,22 +16,11 @@ export class Users extends Component {
       .catch((error) => {
         console.log(error);
       });
-  }
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      users: [],
-    };
-  }
-  render() {
-    const { users } = this.state;
-    const show = users.map((user) => (
-      <UserDetail User={user} key={user.id + user.username} />
-    ));
-    return <div>{show}</div>;
-  }
+  }, []);
+  const show = users.map((user) => (
+    <UserDetail User={user} key={user.id + user.username} />
+  ));
+  return <div>{show}</div>;
 }
 
 export default Users;
