@@ -3,6 +3,7 @@ import React, { Component } from "react";
 export class UserDetail extends Component {
   render() {
     const { User } = this.props;
+    console.log(User);
     return (
       <p>
         Id = {User.id}

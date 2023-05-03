@@ -15,6 +15,7 @@ import LoginForm from "./components/loginForm";
 import PostDetail from "./components/PostDetail";
 import ComponentE from "./components/ComponentE";
 import RedCounter from "./components/RedCounter";
+import UsersReducer from "./Pages/UsersReducer";
 
 export const Context = React.createContext();
 const intialState = 0;
@@ -42,9 +43,7 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={{ state: state, dispatch: dispatch }}>
-        <RedCounter />
-      </Context.Provider>
+      <UsersReducer />
     </div>
   );
 
