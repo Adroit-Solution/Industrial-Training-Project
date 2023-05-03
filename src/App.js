@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Pages/Home";
 import Title from "./components/Title";
-import Counter from "./Pages/Counter";
 import { useState } from "react";
 import About from "./Pages/About";
 import List from "./Pages/List";
@@ -11,6 +10,7 @@ import FocusInput from "./Pages/FocusInput";
 import RenderPropsComponent from "./Pages/RenderPropsComponent";
 import Users from "./Pages/Users";
 import Post from "./Pages/Post";
+import CounterHook from "./Pages/CounterHook";
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Post />
+      <CounterHook></CounterHook>
     </div>
   );
 
