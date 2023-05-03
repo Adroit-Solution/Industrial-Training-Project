@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Pages/Home";
 import Title from "./components/Title";
-import { useState } from "react";
+import React, { useState } from "react";
 import About from "./Pages/About";
 import List from "./Pages/List";
 import Login from "./components/Login";
@@ -13,6 +13,9 @@ import Post from "./Pages/Post";
 import CounterHook from "./Pages/CounterHook";
 import LoginForm from "./components/loginForm";
 import PostDetail from "./components/PostDetail";
+import ComponentE from "./components/ComponentE";
+
+export const Context = React.createContext();
 
 function App() {
   const [page, setPage] = useState("Home");
@@ -27,7 +30,9 @@ function App() {
 
   return (
     <div className="App">
-      <PostDetail />
+      <Context.Provider value={"Contex"}>
+        <ComponentE />
+      </Context.Provider>
     </div>
   );
 
