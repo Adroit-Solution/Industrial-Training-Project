@@ -14,6 +14,7 @@ import CounterHook from "./Pages/CounterHook";
 import LoginForm from "./components/loginForm";
 import PostDetail from "./components/PostDetail";
 import ComponentE from "./components/ComponentE";
+import RedCounter from "./components/RedCounter";
 
 export const Context = React.createContext();
 
@@ -30,9 +31,7 @@ function App() {
 
   return (
     <div className="App">
-      <Context.Provider value={"Contex"}>
-        <ComponentE />
-      </Context.Provider>
+      <RedCounter />
     </div>
   );
 
