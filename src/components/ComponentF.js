@@ -1,16 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Context } from "../App";
 
 function ComponentF() {
-  return (
-    <div>
-      <Context.Consumer>
-        {(user) => {
-          return <div>{user} Passed Successfully</div>;
-        }}
-      </Context.Consumer>
-    </div>
-  );
+  const contextValue = useContext(Context);
+  return <div>This is a {contextValue}</div>;
 }
 
 export default ComponentF;
