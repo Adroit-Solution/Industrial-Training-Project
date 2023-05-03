@@ -1,26 +1,20 @@
-import React, { useReducer } from "react";
-
-const intialState = 0;
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "increment":
-      return state + 1;
-    case "decrement":
-      return state - 1;
-    default:
-      break;
-  }
-};
+import React, { useContext, useReducer } from "react";
+import { Context } from "../App";
 
 function RedCounter() {
-  const [state, dispatch] = useReducer(reducer, intialState);
+  const context = useContext(Context);
+  console.log(context);
   return (
     <>
-      <div>Counter {state}</div>
-      <button onClick={() => dispatch({ type: "increment" })}>Add</button>
+      <div>Counter {context.state}</div>
+      <button onClick={() => context.dispatch({ type: "increment" })}>
+        Add
+      </button>
       <br />
       <br />
-      <button onClick={() => dispatch({ type: "decrement" })}>Decrement</button>
+      <button onClick={() => context.dispatch({ type: "decrement" })}>
+        Decrement
+      </button>
       <br />
       <br />
     </>
