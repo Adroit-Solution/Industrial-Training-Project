@@ -1,20 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useRef } from "react";
 
-export class InputRef extends Component {
-  constructor(props) {
-    super(props);
-    this.inputRef = React.createRef();
+function InputRef() {
+  const ref = useRef(null);
+  const focusInput = () => {
+    ref.current.focus();
+  };
 
-    this.state = {};
-  }
+  useEffect(() => {
+    focusInput();
+  }, []);
 
-  focusInput() {
-    this.inputRef.current.focus();
-  }
-
-  render() {
-    return <input type={"text"} ref={this.inputRef} />;
-  }
+  return <input type={"text"} ref={ref} />;
 }
 
 export default InputRef;
