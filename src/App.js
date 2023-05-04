@@ -16,6 +16,7 @@ import PostDetail from "./components/PostDetail";
 import ComponentE from "./components/ComponentE";
 import RedCounter from "./components/RedCounter";
 import UsersReducer from "./Pages/UsersReducer";
+import RegisterUser from "./components/RegisterUser";
 
 export const Context = React.createContext();
 const intialState = 0;
@@ -43,7 +44,7 @@ function App() {
 
   return (
     <div className="App">
-      <UsersReducer />
+      <RegisterUser />
     </div>
   );
 
