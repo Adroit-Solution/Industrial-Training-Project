@@ -19,6 +19,7 @@ import UsersReducer from "./Pages/UsersReducer";
 import RegisterUser from "./components/RegisterUser";
 import InputRef from "./Pages/InputRef";
 import UseStateRender from "./components/UseStateRender";
+import UseReducer from "./components/UseReducer";
 
 export const Context = React.createContext();
 const intialState = 0;
@@ -46,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <UseStateRender />
+      <UseReducer />
     </div>
   );
 
