@@ -18,6 +18,7 @@ import RedCounter from "./components/RedCounter";
 import UsersReducer from "./Pages/UsersReducer";
 import RegisterUser from "./components/RegisterUser";
 import InputRef from "./Pages/InputRef";
+import UseStateRender from "./components/UseStateRender";
 
 export const Context = React.createContext();
 const intialState = 0;
@@ -45,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <InputRef />
+      <UseStateRender />
     </div>
   );
 
