@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Child from './Child';
+import ChildTwo from './ChildTwo';
 
 function Parent() {
     const [count, setCount] = useState(0)
@@ -10,8 +11,8 @@ function Parent() {
         <>
             <h2>Parent</h2>
             <button onClick={() => setCount((c) => c + 1)}>Count {count}</button>
-            <button onClick={() => setCount((c) => c)}>No Change {count}</button>
             <Child />
+            <ChildTwo />
         </>
     )
 }
